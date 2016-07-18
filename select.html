@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="select.css" rel="stylesheet" />
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript" src="basic.js"></script>
+</head>
+    <body>
+        <div class="select_container">
+            <div class="select">
+                <div id="dropdown"><i class="triangle"></i></div>
+                <input class="input" id="show_input" type="text" value="" placeholder="Choose data" onpaste="return false;" autocomplete="off"/>
+                <input class="hide_input" id="real_input" type="text"/>
+            </div>
+            <div id="list">
+                <ul class="ul">
+                    <li class="li">短期借款明细表</li>
+                    <li class="li">应交税费明细表</li>
+                    <li class="li">应交增值税明细</li>
+                    <li class="li">主要分析指标表(计算机自动生成)</li>
+                    <li class="li">预收账款明细表</li>
+                    <li class="li">应付票据明细表</li>
+                    <li class="li">固定资产情况表</li>
+                    <li class="li">应收账款明细表</li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            module.select({
+                dropdown:'dropdown',        // 下拉按钮，非必须
+                list : 'list',                  // 下拉列表，必须
+                show_input : 'show_input',            //显式输入框，用于搜索、输入、和显示。必须
+                real_input: 'real_input',            // 隐式输入框，最终选中数据，必须
+                width:''
+            });
+        </script>
+    </body>
+</html>

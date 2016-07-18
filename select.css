@@ -1,0 +1,91 @@
+﻿
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block !important;
+}
+
+        
+.select_container{
+    position: relative;
+}
+.select{
+    width: auto ;
+    display: inline-block;
+    position: relative;
+}
+.input {
+    height: 30px;
+    width: 240px;
+    font-size: 18px;
+    color: #bbb;
+    padding: 15px 15px;
+    outline: none;
+    border:1px solid #ccc;
+}
+.select_container #dropdown {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+.select_container #dropdown .triangle {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid;
+    border-top-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 333;
+}
+.hide_input {
+    top: 0;
+    position: absolute;
+    visibility: hidden;
+}
+#list {
+    position: absolute;
+    background-color: #f7f7f7;
+    z-index: 222;
+    padding: 0 21px 0 0;
+    border: 1px solid #e2e2e2;
+    /* 自定义的slideDown和slideUp功能要求:外层div高度自适应，隐藏溢出部分。 */
+    display: none;
+    height: auto;
+    overflow: hidden;
+}
+#list .ul {
+    padding-left: 0;
+    margin:0;
+    height: auto;
+    max-height: 200px;
+    overflow: auto;
+}
+#list .li {
+    padding-left: 20px;
+    color: #bbb;
+    font-size: 18px;
+    height: 50px;
+    border-bottom: 1px solid #e2e2e2;
+    line-height: 50px;
+    cursor: pointer;
+}
+#list .li.selected {
+    background-color: #DCDADA;
+}
+#list .li.active, #list .li:hover {
+    background-color: #e4e4e4;
+}
